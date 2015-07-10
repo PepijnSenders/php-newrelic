@@ -1,0 +1,21 @@
+{
+    "name": "pep/php-newrelic",
+    "description": "Lightweight PHP client for NewRelic.",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pep\\": "src/Pep/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pepijn Senders",
+            "email": "p.senders92@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "~4.7"
+    }
+}
