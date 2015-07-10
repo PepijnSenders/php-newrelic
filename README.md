@@ -32,3 +32,16 @@ NewRelic::noticeError('Testing PHP client for NewRelic');
 If the `NewRelic` PHP agent is not loaded, the function will die gracefully without exceptions. So you can run the functions without checks in your development environment.
 
 If you're trying to call a function that does not exist, it will throw the `Pep\NewRelic\MethodNotFoundException` exception.
+
+```php
+<?php
+
+require_once 'vendor/autoload.php';
+
+use Pep\NewRelic;
+use Pep\NewRelic\MethodNotFoundException as NewRelicMethodNotFoundException;
+
+try {
+  NewRelic::thisMethodDoesNotExist('Testing PHP client for NewRelic');
+} catch (NewRelicMethodNotFoundException $e) {}
+```
