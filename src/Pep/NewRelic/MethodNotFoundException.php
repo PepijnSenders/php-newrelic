@@ -2,6 +2,6 @@
 
 use Pep\NewRelic\Exception as NewRelicException;
 
-class FunctionNotFoundException extends NewRelicException
+class MethodNotFoundException extends NewRelicException
 {
 }

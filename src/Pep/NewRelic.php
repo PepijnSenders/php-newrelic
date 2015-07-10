@@ -1,7 +1,7 @@
 <?php namespace Pep;
 
 use Pep\NewRelic\Str;
-use Pep\NewRelic\FunctionNotFoundException as NewRelicFunctionNotFoundException;
+use Pep\NewRelic\MethodNotFoundException as NewRelicMethodNotFoundException;
 
 class NewRelic
 {
@@ -15,7 +15,7 @@ class NewRelic
             if (function_exists($newRelicFunctionName)) {
                 call_user_func_array($name, $arguments);
             } else {
-                throw new NewRelicFunctionNotFoundException("Function $name does not exist");
+                throw new NewRelicMethodNotFoundException("Function $name does not exist");
             }
         }
     }

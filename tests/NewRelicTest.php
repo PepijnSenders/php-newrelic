@@ -20,7 +20,7 @@ class NewRelicTest extends PHPUnit_Framework_TestCase
         } else {
             NewRelic::$extensionLoaded = true;
 
-            $this->setExpectedException('Pep\NewRelic\FunctionNotFoundException');
+            $this->setExpectedException('Pep\NewRelic\MethodNotFoundException');
 
             NewRelic::noticeError('test');
         }
@@ -28,7 +28,7 @@ class NewRelicTest extends PHPUnit_Framework_TestCase
 
     public function testNonExistingNewRelicMethodCall()
     {
-        $this->setExpectedException('Pep\NewRelic\FunctionNotFoundException');
+        $this->setExpectedException('Pep\NewRelic\MethodNotFoundException');
 
         NewRelic::test('test');
     }
